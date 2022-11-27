@@ -6,9 +6,8 @@ arch:
   - amd64
   - i386
 description: "SAIC API Gateway"
-init: false
 name: "SAIC API"
 ports:
   42042/tcp: 42042
 slug: saic_api
-version: "0.0.1"
+version: "0.0.3"

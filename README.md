@@ -121,6 +121,19 @@ rest:
         unit_of_measurement: "kWh"
 ```
 
+Restart Home Assistant if your created entities do not show up. Every API Gateway request is logged like the following (You can access it via the Add-on protocol):
+
+```
+SAIC-API Gateway running! Access the API endpoints via http://localhost:42042/ 
+Accessed: /getData
+Cooldown of 600 seconds is over and API request will be sent.
+Sending login request...
+Sending initial chargingStatusRequestMessage to wake the car...
+Waiting for 6 seconds until the car woke up and responded to our request.
+Waiting for 6 seconds until the car woke up and responded to our request.
+We got a response.
+```
+
 #### Skip cooldown
 If you want to skip the 600s cooldown/cache add "skipCooldown" as parameter to your POST request (not recommended).
 
