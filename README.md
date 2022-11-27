@@ -55,12 +55,11 @@ This .jar is then packaged into a Docker container (very inefficient - I know!) 
 **NOTE: In the future this will be simplified by creating a native Home Assistant Add-on repository**
 
 1. Download the latest release or clone the repository
-2. Extract the folder and put it in a subfolder in your Home Assistant Add-ons folder /addons/saic. This can be done via FTP access or the add-on "Filebrowser" (search for "Filebrowser" under Settings-->Add-ons-->Filebrowser).
-3. In the Dockerfile uncomment the right CPU architecture (default Raspberry Pi --> arm64v8)
-4. Open Settings --> Add-ons --> Button: Add-on Store --> Dot-Menu right top --> "Check for updates" to tell Home Assistant to search for the newly added Add-on
-5. Install the add-on (takes up to 5-15 min on a Raspberry Pi) and start it
-6. Docker-Container should be running - confirm that by going to the add-on page (SAIC Gateway) and click on the "Protocol" tab
-7. Protocol tab should output "SAIC-API Gateway running! Access the API endpoints via http://localhost:42042/"
+2. Extract the folder and put it in a subfolder in your Home Assistant Add-ons folder /addons/saic_api. This can be done via FTP access or the add-on "Filebrowser" (search for "Filebrowser" under Settings-->Add-ons-->Filebrowser).
+3. Open Settings --> Add-ons --> Button: Add-on Store --> Dot-Menu right top --> "Check for updates" to tell Home Assistant to search for the newly added Add-on
+4. Install the add-on (takes up to 5-15 min on a Raspberry Pi) and start it
+5. Docker-Container should be running - confirm that by going to the add-on page (SAIC Gateway) and click on the "Protocol" tab
+6. Protocol tab should output "SAIC-API Gateway running! Access the API endpoints via http://localhost:42042/" on the homeassistant server
 
 ## Home Assistant Sensor/Entity
 
