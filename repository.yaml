@@ -1,0 +1,4 @@
+# https://developers.home-assistant.io/docs/add-ons/repository#repository-configuration
+name: iSmart Gateway Home Assistant Add-on
+url: 'https://github.com/ReverseEngineeringDE/iSmart-Gateway-Home-Assistant-Add-on'
+maintainer: ReverseEngineeringDE
