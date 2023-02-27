@@ -52,7 +52,7 @@ This .jar is then packaged into a Docker container (very inefficient - I know!) 
 
 ## Installation
 
-**Note: This Add-on is tagged as experimental. Please enable advanced mode your home assistant instance!
+**NOTE: This Add-on is tagged as experimental. Please enable advanced mode your home assistant instance!**
 
 1. Copy the Github-URL
 2. Go to: Settings -> Add-ons -> ADD_ON STORE -> 3-dot-menu -> Repositorys -> Add the Github URL
