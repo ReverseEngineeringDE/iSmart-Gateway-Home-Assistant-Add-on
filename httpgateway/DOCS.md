@@ -10,7 +10,7 @@ Used .jar file based on: [saic-java-api-gateway](https://github.com/ReverseEngin
 
 **Warning: Don't access/refresh the API regularly.** It will drain your 12v car battery and you will be unable to start it! I implemented a 600s API refresh cooldown cache but be careful with your automations. This will be improved in future versions.
 
-This is a work in progress (WIP). In the future this will be simplified by creating a native Home Assistant Add-on repository.
+This is a work in progress (WIP). 
 
 ![Supports aarch64 Architecture][aarch64-shield]
 ![Supports amd64 Architecture][amd64-shield]
@@ -50,18 +50,6 @@ This .jar is then packaged into a Docker container (very inefficient - I know!) 
 - Reads the endpoint with the RESTful integration
 - parses the JSON output to sensors/entities
 
-## Installation
-
-**NOTE: In the future this will be simplified by creating a native Home Assistant Add-on repository**
-
-1. Download the latest release or clone the repository
-2. Extract the folder and put it in a subfolder in your Home Assistant Add-ons folder /addons/saic. This can be done via FTP access or the add-on "Filebrowser" (search for "Filebrowser" under Settings-->Add-ons-->Filebrowser).
-3. In the Dockerfile uncomment the right CPU architecture (default Raspberry Pi --> arm64v8)
-4. Open Settings --> Add-ons --> Button: Add-on Store --> Dot-Menu right top --> "Check for updates" to tell Home Assistant to search for the newly added Add-on
-5. Install the add-on (takes up to 5-15 min on a Raspberry Pi) and start it
-6. Docker-Container should be running - confirm that by going to the add-on page (SAIC Gateway) and click on the "Protocol" tab
-7. Protocol tab should output "SAIC-API Gateway running! Access the API endpoints via http://localhost:42042/"
-
 ## Home Assistant Sensor/Entity
 
 **Warning: Don't access/refresh the API regularly. It will drain your 12v car battery and you will be unable to start it! I implemented a 600s API refresh cooldown cache but be careful with your automations. This will be improved in future versions.**
@@ -89,35 +77,35 @@ rest:
       password: "yourIsmartAccountPasswordHere"
     sensor:
       - name: "MG5_bmsPackSOCDsp"
-        value_template: "{{(value_json.applicationData.bmsPackSOCDsp | float / 10 )}}"
+        value_template: "{{(value_json.applicationData.bmsPackSOCDsp / 10 )}}"
         unit_of_measurement: "%"
       - name: "MG5_bmsEstdElecRng"
-        value_template: "{{(value_json.applicationData.bmsEstdElecRng | int )}}"
+        value_template: "{{(value_json.applicationData.bmsEstdElecRng )}}"
         unit_of_measurement: "km"
       - name: "MG5_mileage"
-        value_template: "{{(value_json.applicationData.chargeStatus.mileage | int / 10 )}}"
+        value_template: "{{(value_json.applicationData.chargeStatus.mileage / 10 )}}"
         unit_of_measurement: "km"
       - name: "MG5_eventCreationTime"
         value_template: "{{ as_datetime(value_json.body.eventCreationTime)}}"
       - name: "MG5_lastCharge_endTime"
         value_template: "{{ as_datetime(value_json.applicationData.chargeStatus.endTime)}}"
       - name: "MG5_mileageOfDay"
-        value_template: "{{(value_json.applicationData.chargeStatus.mileageOfDay | int / 10 )}}"
+        value_template: "{{(value_json.applicationData.chargeStatus.mileageOfDay / 10 )}}"
         unit_of_measurement: "km"
       - name: "MG5_mileageSinceLastCharge"
-        value_template: "{{(value_json.applicationData.chargeStatus.mileageSinceLastCharge | int / 10 )}}"
+        value_template: "{{(value_json.applicationData.chargeStatus.mileageSinceLastCharge / 10 )}}"
         unit_of_measurement: "km"
       - name: "MG5_realtimePower"
-        value_template: "{{(value_json.applicationData.chargeStatus.realtimePower | float / 10 )}}"
+        value_template: "{{(value_json.applicationData.chargeStatus.realtimePower / 10 )}}"
         unit_of_measurement: "kWh"
       - name: "MG5_powerUsageSinceLastCharge"
-        value_template: "{{(value_json.applicationData.chargeStatus.powerUsageSinceLastCharge | float / 10 )}}"
+        value_template: "{{(value_json.applicationData.chargeStatus.powerUsageSinceLastCharge / 10 )}}"
         unit_of_measurement: "kWh"
       - name: "MG5_totalBatteryCapacity"
-        value_template: "{{(value_json.applicationData.chargeStatus.totalBatteryCapacity | float / 10 )}}"
+        value_template: "{{(value_json.applicationData.chargeStatus.totalBatteryCapacity / 10 )}}"
         unit_of_measurement: "kWh"
       - name: "MG5_lastChargeEndingPower"
-        value_template: "{{(value_json.applicationData.chargeStatus.lastChargeEndingPower | float / 10 )}}"
+        value_template: "{{(value_json.applicationData.chargeStatus.lastChargeEndingPower / 10 )}}"
         unit_of_measurement: "kWh"
 ```
 
