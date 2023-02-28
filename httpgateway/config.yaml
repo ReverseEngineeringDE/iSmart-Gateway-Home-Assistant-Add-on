@@ -7,7 +7,7 @@ arch:
   - i386
 description: "Rest api-gateway for SAIC cars like MG5, ZS EV or Marvel R"
 name: "SAIC API Gateway"
-url: "https://github.com/Tonno87/ismart-gateway-home-assistant-addon"
+url: "https://github.com/ReverseEngineeringDE/iSmart-Gateway-Home-Assistant-Add-on"
 ports:
   42042/tcp: 42042
 slug: saic_api
