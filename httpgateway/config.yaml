@@ -1,0 +1,15 @@
+---
+arch:
+  - armhf
+  - armv7
+  - aarch64
+  - amd64
+  - i386
+description: "Rest api-gateway for SAIC cars like MG5, ZS EV or Marvel R"
+name: "SAIC API Gateway"
+url: "https://github.com/ReverseEngineeringDE/iSmart-Gateway-Home-Assistant-Add-on"
+ports:
+  42042/tcp: 42042
+slug: saic_api
+version: "0.0.3"
+stage: "experimental"

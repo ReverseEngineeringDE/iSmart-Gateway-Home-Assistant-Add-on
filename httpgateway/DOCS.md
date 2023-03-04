@@ -50,27 +50,6 @@ This .jar is then packaged into a Docker container (very inefficient - I know!) 
 - Reads the endpoint with the RESTful integration
 - parses the JSON output to sensors/entities
 
-## Installation
-
-**NOTE: This Add-on is tagged as experimental. Please enable advanced mode your home assistant instance!**
-
-1. Copy the Github-URL
-2. Go to: Settings -> Add-ons -> ADD_ON STORE -> 3-dot-menu -> Repositorys -> Add the Github URL
-3. Reload the Page and choose SAIC API Gateway
-4. Install and enjoy!
-
-## Manual Installation
-
-**NOTE: In the future this will be simplified by creating a native Home Assistant Add-on repository**
-
-1. Download the latest release or clone the repository
-2. Extract the folder and put it in a subfolder in your Home Assistant Add-ons folder /addons/saic. This can be done via FTP access or the add-on "Filebrowser" (search for "Filebrowser" under Settings-->Add-ons-->Filebrowser).
-3. In the Dockerfile uncomment the right CPU architecture (default Raspberry Pi --> arm64v8)
-4. Open Settings --> Add-ons --> Button: Add-on Store --> Dot-Menu right top --> "Check for updates" to tell Home Assistant to search for the newly added Add-on
-5. Install the add-on (takes up to 5-15 min on a Raspberry Pi) and start it
-6. Docker-Container should be running - confirm that by going to the add-on page (SAIC Gateway) and click on the "Protocol" tab
-7. Protocol tab should output "SAIC-API Gateway running! Access the API endpoints via http://localhost:42042/"
-
 ## Home Assistant Sensor/Entity
 
 **Warning: Don't access/refresh the API regularly. It will drain your 12v car battery and you will be unable to start it! I implemented a 600s API refresh cooldown cache but be careful with your automations. This will be improved in future versions.**
