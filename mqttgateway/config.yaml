@@ -12,36 +12,9 @@ stage: "experimental"
 version: "latest"
 options:
   config: "/config/saic-mqtt-gateway.toml"
-#  mqtt:
-#    mqtt_uri: "tcp://localhost:1883"
-#    mqtt_user: ""
-#    mqtt_pass: ""
-#  saic:
-#    saic_uri: "https://tap-eu.soimt.com"
-#    saic_user: ""
-#    saic_pass: ""
-#  abrp:
-#    api_key: "8cfc314b-03cd-4efe-ab7d-4431cd8f2e2d"
-#    vin1: ""
-#    token1: ""
-#    vin2: ""
-#    token2: ""
 schema:
   config: "str"
-#  mqtt:
-#    mqtt_uri: "str"
-#    mqtt_user: "str"
-#    mqtt_pass: "password"
-#  saic:
-#    saic_uri: "url"
-#    saic_user: "str"
-#    saic_pass: "password"
-#  abrp:
-#    api_key: "str?"
-#    vin1: "str?"
-#    token1: "str?"
-#    vin2: "str?"
-#    token2: "str?"
 init: false
 map: 
   - config:ro
+host_network: true
