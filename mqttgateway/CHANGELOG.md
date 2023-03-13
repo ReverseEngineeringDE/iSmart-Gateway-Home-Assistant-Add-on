@@ -1,9 +1,11 @@
-# SAIC API Gateway
+# SAIC MQTT Gateway (latest)
 
-## latest
-
-- initial Release 
-- rebuild for HASS.IO addon support, now you could add it over the repository option
-- adding multiarch-support (it's JAVA!)
-- update DOCS and README
-- create CHANGELOG :)
+### Added:
+MQTT
+- added --saic-uri configuration option
+- automatically register for all alarm types
+- create Docker image
+- create Debian package
+### Fixed
+API
+- support messages with DispatcherBody data longer than 256 bytes
