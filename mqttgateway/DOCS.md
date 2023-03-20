@@ -93,8 +93,8 @@ mqtt:
     - name: "MG5_SOC"
       state_topic: saic/vehicle/LSJExxxxxxxxxxxxxx/soc
       unit_of_measurement: "%"
-    - name: "MG5_Milage"
-      state_topic: saic/vehicle/LSJExxxxxxxxxxxxxx/milage
+    - name: "MG5_Mileage"
+      state_topic: saic/vehicle/LSJExxxxxxxxxxxxxx/mileage
       unit_of_measurement: "km"
       
 ```
