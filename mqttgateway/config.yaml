@@ -5,7 +5,7 @@ arch:
   - amd64
   - i386
 description: "MQTT-gateway for SAIC cars like MG5, ZS EV or Marvel R"
-name: "SAIC MQTT Gateway (latest)"
+name: "SAIC MQTT Gateway (dev)"
 url: "https://github.com/ReverseEngineeringDE/iSmart-Gateway-Home-Assistant-Add-on"
 slug: "saic_api_mqtt"
 stage: "experimental"
